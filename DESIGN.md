@@ -26,6 +26,14 @@ Dark institutional editorial presence site. Premium investment-house craft. Pers
 | Display | Instrument Serif |
 | UI / body | Schibsted Grotesk |
 
+## Mark
+
+Thin geometric globe with meridians (brass stroke on near-black). No lettermark arches.
+
+## Imagery
+
+Full-bleed photographic plates: skyline hero, research desk, energy infrastructure, secure digital custody.
+
 ## Layout
 
 - Brand-dominant hero over full-bleed photography, no CTA cluster
