@@ -8,7 +8,11 @@ Plain HTML / CSS / JS. No build step.
 
 ## Deploy (Coolify)
 
-Serve the project root as a static site (`index.html`).
+- App: `worldwide-invest` on **office-app** (same Coolify server as zeido)
+- Domains: `https://worldwide-invest.org` and `https://www.worldwide-invest.org`
+- Details: `.cursor/docs/coolify.md`
+
+Push `main` to GitHub; Coolify rebuilds from the Dockerfile.
 
 ## Contact
 
