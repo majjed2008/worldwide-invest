@@ -32,6 +32,8 @@ html {
   .reveal,
   .hero-photo,
   .vista img,
+  .hero-sweep,
+  .scroll-cue span,
   [data-parallax] {
     animation: none !important;
     transition: none !important;
@@ -719,13 +721,26 @@ a {
 
   .clip-line > span {
     transform: translateY(110%);
-    transition: transform 900ms var(--ease);
-    transition-delay: var(--d, 0ms);
   }
 
-  .hero.is-ready .clip-line > span,
+  .hero .clip-line > span {
+    animation: line-up 950ms var(--ease) both;
+    animation-delay: var(--d, 0ms);
+  }
+
+  @keyframes line-up {
+    from {
+      transform: translateY(110%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
   .reveal.in .clip-line > span {
     transform: translateY(0);
+    transition: transform 900ms var(--ease);
+    transition-delay: var(--d, 0ms);
   }
 
   .wipe .wipe-frame {
