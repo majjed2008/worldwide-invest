@@ -7,7 +7,7 @@
 - **Destination:** `oc9fxaltpfhjo5vwgmxy86d7`
 - **Git:** `https://github.com/majjed2008/worldwide-invest` branch `main` (public)
 - **Build:** Dockerfile → nginx:alpine on port `80`
-- **Domains:** `https://worldwide-invest.org`, `https://www.worldwide-invest.org`
+- **Domains:** `https://worldwide-invest.org` (canonical). `www` → apex via Coolify `redirect=non-www`
 - **Edge:** mj-server Traefik `/data/coolify/proxy/dynamic/office-app.yaml` hosts → office-app `:443`
 - **Mail:** SpaceMail DNS untouched
 
@@ -22,4 +22,5 @@ git push origin main
 ## Health
 
 - Public: `https://worldwide-invest.org/` → 200, body contains `Worldwide Invest`
+- `https://www.worldwide-invest.org/` → 301/308 to `https://worldwide-invest.org/`
 - Do not change SpaceMail MX/SPF/DKIM when editing Cloudflare
