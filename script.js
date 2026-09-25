@@ -1,52 +1,48 @@
 (() => {
   const year = document.getElementById("year");
-  if (year) {
-    year.textContent = String(new Date().getFullYear());
-  }
+  if (year) year.textContent = String(new Date().getFullYear());
 
   const header = document.querySelector("[data-header]");
   const onScroll = () => {
-    if (!header) return;
-    header.classList.toggle("is-solid", window.scrollY > 24);
+    if (header) header.classList.toggle("is-on", window.scrollY > 20);
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
-  const toggle = document.querySelector("[data-nav-toggle]");
-  const mobileNav = document.querySelector("[data-mobile-nav]");
-  if (toggle && mobileNav) {
-    toggle.addEventListener("click", () => {
-      const open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      mobileNav.hidden = open;
+  const menu = document.querySelector("[data-menu]");
+  const drawer = document.querySelector("[data-drawer]");
+  if (menu && drawer) {
+    menu.addEventListener("click", () => {
+      const open = menu.getAttribute("aria-expanded") === "true";
+      menu.setAttribute("aria-expanded", String(!open));
+      drawer.hidden = open;
     });
-    mobileNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        toggle.setAttribute("aria-expanded", "false");
-        mobileNav.hidden = true;
+    drawer.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        menu.setAttribute("aria-expanded", "false");
+        drawer.hidden = true;
       });
     });
   }
 
-  const revealTargets = document.querySelectorAll(
-    ".section-head, .strategy, .process li, .perspective-rail article, .contact-panel, .trust-strip",
+  const targets = document.querySelectorAll(
+    ".band-head, .market-rows li, .capability-list article, .insight, .firm-panel, .split-copy",
   );
-  revealTargets.forEach((el) => el.classList.add("reveal"));
-
+  targets.forEach((el) => el.classList.add("reveal"));
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-in");
-            io.unobserve(entry.target);
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -8% 0px" },
+      { threshold: 0.14 },
     );
-    revealTargets.forEach((el) => io.observe(el));
+    targets.forEach((el) => io.observe(el));
   } else {
-    revealTargets.forEach((el) => el.classList.add("is-in"));
+    targets.forEach((el) => el.classList.add("in"));
   }
 })();

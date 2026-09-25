@@ -3,16 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Worldwide Invest - Global Multi-Asset Investment</title>
+    <title>Worldwide Invest</title>
     <meta
       name="description"
-      content="Worldwide Invest is a global multi-asset investment firm. We partner with institutions and companies across equities, digital assets, and energy markets."
+      content="Worldwide Invest is a global multi-asset investment firm spanning equities, digital assets, and energy markets."
     />
-    <meta name="theme-color" content="#070b12" />
+    <meta name="theme-color" content="#05070c" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,650;12..96,750&family=Source+Code+Pro:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -22,266 +22,192 @@
     <a class="skip" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
-      <a class="brand-lockup" href="#top" aria-label="Worldwide Invest home">
-        <img class="mark" src="assets/mark.svg" width="36" height="36" alt="" />
-        <span class="brand-name">Worldwide Invest</span>
+      <a class="logo" href="#top">
+        <img src="assets/mark.svg" width="28" height="28" alt="" />
+        <span>Worldwide Invest</span>
       </a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#strategies">Strategies</a>
-        <a href="#approach">Approach</a>
-        <a href="#perspectives">Perspectives</a>
-        <a href="#contact" class="nav-cta">Contact</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#markets">Markets</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#insights">Insights</a>
+        <a href="#firm">The firm</a>
       </nav>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-nav-toggle>
+      <button class="menu" type="button" aria-expanded="false" aria-controls="drawer" data-menu>
         <span class="sr-only">Menu</span>
-        <span></span><span></span>
+        <i></i><i></i>
       </button>
     </header>
 
-    <div class="mobile-nav" id="mobile-nav" hidden data-mobile-nav>
-      <a href="#strategies">Strategies</a>
-      <a href="#approach">Approach</a>
-      <a href="#perspectives">Perspectives</a>
-      <a href="#contact">Contact</a>
+    <div class="drawer" id="drawer" hidden data-drawer>
+      <a href="#markets">Markets</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#insights">Insights</a>
+      <a href="#firm">The firm</a>
     </div>
 
     <main id="main">
       <section id="top" class="hero">
-        <div class="hero-media" aria-hidden="true">
-          <div class="hero-wash"></div>
-          <div class="hero-map-overlay">
-            <svg class="map-svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
-              <defs>
-                <radialGradient id="room" cx="48%" cy="38%" r="62%">
-                  <stop offset="0%" stop-color="#1a2d42" stop-opacity="0.95" />
-                  <stop offset="55%" stop-color="#0d1520" stop-opacity="0.5" />
-                  <stop offset="100%" stop-color="#070b12" stop-opacity="0" />
-                </radialGradient>
-                <linearGradient id="route" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#c4a574" stop-opacity="0" />
-                  <stop offset="40%" stop-color="#c4a574" stop-opacity="0.9" />
-                  <stop offset="100%" stop-color="#6a8fa3" stop-opacity="0" />
-                </linearGradient>
-              </defs>
-              <rect width="1440" height="900" fill="#070b12" />
-              <ellipse cx="720" cy="360" rx="680" ry="380" fill="url(#room)" />
-              <g fill="none" stroke="#3d5368" stroke-width="0.65" opacity="0.45">
-                <ellipse cx="720" cy="430" rx="540" ry="265" />
-                <ellipse cx="720" cy="430" rx="420" ry="205" />
-                <ellipse cx="720" cy="430" rx="280" ry="140" />
-                <path d="M180 430 H1260" />
-                <path d="M260 300 H1180" />
-                <path d="M260 560 H1180" />
-                <path d="M720 160 V700" />
-                <path d="M520 200 V660" />
-                <path d="M920 200 V660" />
-              </g>
-              <g class="routes" fill="none" stroke="url(#route)" stroke-width="1.55" stroke-linecap="round">
-                <path class="route" d="M230 510 C420 360, 560 310, 720 395 C900 490, 1050 310, 1220 280" />
-                <path class="route r2" d="M270 270 C500 330, 620 530, 740 465 C900 385, 1030 555, 1190 590" />
-                <path class="route r3" d="M310 620 C500 520, 640 260, 800 315 C960 375, 1080 500, 1240 455" />
-              </g>
-              <g fill="#c4a574">
-                <circle class="node" cx="720" cy="395" r="4.2" />
-                <circle class="node" cx="230" cy="510" r="3.1" />
-                <circle class="node" cx="1220" cy="280" r="3.1" />
-                <circle class="node" cx="270" cy="270" r="2.6" />
-                <circle class="node" cx="1190" cy="590" r="2.6" />
-                <circle class="node" cx="1240" cy="455" r="2.6" />
-              </g>
-            </svg>
-          </div>
-          <div class="hero-vignette"></div>
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-photo"></div>
+          <div class="hero-grid"></div>
+          <div class="hero-fade"></div>
         </div>
-
-        <div class="hero-copy">
-          <p class="brand-display">Worldwide Invest</p>
-          <p class="lede">
-            A global multi-asset investment firm. We structure capital and partnerships across
-            equities, digital assets, and energy markets - with the discretion partners expect.
+        <div class="hero-inner">
+          <p class="wordmark">Worldwide Invest</p>
+          <h1>Global capital.<br />Disciplined markets.</h1>
+          <p class="standfirst">
+            A multi-asset investment firm operating across equities, digital assets, and energy
+            markets worldwide.
           </p>
-          <div class="cta-row">
-            <a class="btn-primary" href="#contact">Discuss a partnership</a>
-            <a class="btn-ghost" href="#strategies">Explore strategies</a>
+        </div>
+      </section>
+
+      <section id="markets" class="band markets">
+        <div class="band-head">
+          <h2>Markets</h2>
+          <p>Where we allocate attention and capital across the cycle.</p>
+        </div>
+        <ul class="market-rows">
+          <li>
+            <span class="code">01</span>
+            <div>
+              <h3>Public equities</h3>
+              <p>
+                Regional and thematic equity exposure grounded in research, liquidity, and
+                governance quality.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="code">02</span>
+            <div>
+              <h3>Digital assets</h3>
+              <p>
+                Selective exposure to digital markets with institutional custody and risk
+                standards.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="code">03</span>
+            <div>
+              <h3>Energy and commodities</h3>
+              <p>
+                Oil and energy markets treated as physical systems, logistics, and long cycles.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="code">04</span>
+            <div>
+              <h3>Cross-asset</h3>
+              <p>
+                Portfolio construction that connects geographies and asset classes as one book.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="capabilities" class="band capabilities">
+        <div class="split">
+          <div class="split-copy">
+            <h2>Capabilities</h2>
+            <p>
+              Worldwide Invest is built for long-horizon capital decisions: clear theses,
+              controlled risk, and an institutional operating standard.
+            </p>
+          </div>
+          <div class="capability-list">
+            <article>
+              <h3>Research</h3>
+              <p>Fundamental and market structure work before size. No thesis, no position.</p>
+            </article>
+            <article>
+              <h3>Risk</h3>
+              <p>Limits, liquidity, and downside are designed first, not added later.</p>
+            </article>
+            <article>
+              <h3>Execution</h3>
+              <p>Disciplined entry and exit across venues and time zones.</p>
+            </article>
+            <article>
+              <h3>Stewardship</h3>
+              <p>Quiet, precise communication. Capital treated as a long relationship with risk.</p>
+            </article>
           </div>
         </div>
-
-        <p class="hero-coords" aria-hidden="true">
-          <span>NYC 40.71°N</span>
-          <span>LDN 51.50°N</span>
-          <span>SGP 01.35°N</span>
-        </p>
       </section>
 
-      <section class="strip trust-strip" aria-label="Firm focus">
-        <p>
-          Built for counterparties who judge a firm by clarity, process, and presence - not by
-          noise.
-        </p>
+      <section id="insights" class="band insights">
+        <div class="band-head">
+          <h2>Insights</h2>
+          <p>How we read the world of capital.</p>
+        </div>
+        <div class="insight-grid">
+          <article class="insight featured">
+            <h3>Geography still prices risk</h3>
+            <p>
+              Legal regimes, settlement rails, and physical logistics move returns as much as any
+              single security. Mapping comes before sizing.
+            </p>
+          </article>
+          <article class="insight">
+            <h3>New markets, old standards</h3>
+            <p>
+              Digital assets belong in an institutional book only when custody, sizing, and
+              controls match the rest of the portfolio.
+            </p>
+          </article>
+          <article class="insight">
+            <h3>Energy is a system</h3>
+            <p>
+              Oil and power are not headlines. They are infrastructure, inventory, and time.
+            </p>
+          </article>
+        </div>
       </section>
 
-      <section id="strategies" class="section strategies">
-        <header class="section-head">
-          <h2>Strategies</h2>
+      <section id="firm" class="band firm">
+        <div class="firm-panel">
+          <h2>The firm</h2>
+          <p class="firm-lead">
+            Worldwide Invest exists to deploy and steward capital across global markets with
+            discretion and rigor.
+          </p>
           <p>
-            Coverage partners can place on a map. Each sleeve is sized with the same risk
-            discipline - research first, fashion never.
+            We are not a retail brokerage and not a single-asset crypto brand. The public site is
+            a statement of presence: who we are, where we operate, and the standards we hold.
           </p>
-        </header>
-
-        <div class="strategy-board">
-          <article class="strategy">
-            <span class="tag">EQ</span>
-            <h3>Equities</h3>
-            <p>
-              Public-market exposure across regions. Concentration where diligence supports it;
-              liquidity and governance as first-order constraints.
-            </p>
-          </article>
-          <article class="strategy">
-            <span class="tag">DA</span>
-            <h3>Digital assets</h3>
-            <p>
-              Crypto and related instruments held to institutional standards - custody, sizing,
-              and downside treated with the same seriousness as traditional books.
-            </p>
-          </article>
-          <article class="strategy">
-            <span class="tag">EN</span>
-            <h3>Energy &amp; commodities</h3>
-            <p>
-              Oil and energy markets read as physical cycles and logistics - not as headlines.
-              Exposure designed for horizon, not for spectacle.
-            </p>
-          </article>
-          <article class="strategy">
-            <span class="tag">XA</span>
-            <h3>Cross-asset</h3>
-            <p>
-              Portfolio construction that treats geography and asset class as one system  - 
-              correlating risk across sleeves instead of stacking slogans.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="approach" class="section approach">
-        <div class="approach-layout">
-          <header class="section-head">
-            <h2>How we partner</h2>
-            <p>
-              We work with companies and institutions that want a serious capital counterpart  - 
-              clear terms, discreet process, long horizon.
-            </p>
-          </header>
-
-          <ol class="process">
-            <li>
-              <span class="step">01</span>
-              <div>
-                <h3>Introduction</h3>
-                <p>Referral or direct outreach. We learn who you are and what you are exploring.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step">02</span>
-              <div>
-                <h3>Diligence</h3>
-                <p>Mutual review. Written clarity before commitment. No performance theatre.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step">03</span>
-              <div>
-                <h3>Alignment</h3>
-                <p>Terms both sides can stand behind - publicly and privately.</p>
-              </div>
-            </li>
-            <li>
-              <span class="step">04</span>
-              <div>
-                <h3>Ongoing</h3>
-                <p>Discreet communication and long-horizon stewardship of the relationship.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="perspectives" class="section perspectives">
-        <header class="section-head">
-          <h2>Perspectives</h2>
-          <p>How we think about capital - without invented figures or borrowed prestige.</p>
-        </header>
-        <div class="perspective-rail">
-          <article>
-            <h3>Geography is a risk factor</h3>
-            <p>
-              Time zones, legal regimes, and physical logistics shape returns as much as any
-              ticker. We map exposure before we size it.
-            </p>
-          </article>
-          <article>
-            <h3>New assets, old standards</h3>
-            <p>
-              Digital markets deserve institutional custody and risk rules - not a separate moral
-              universe. Fashion is not a mandate.
-            </p>
-          </article>
-          <article>
-            <h3>Partnership over platform</h3>
-            <p>
-              We are not a retail trading app. Counterparties meet a firm: process, discretion,
-              and a single clear point of contact.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact">
-        <div class="contact-panel">
-          <header class="section-head">
-            <h2>Start a conversation</h2>
-            <p>
-              For partnership and institutional inquiries, write from your corporate address. We
-              respond to serious correspondence.
-            </p>
-          </header>
-          <a class="btn-primary btn-large" href="mailto:partners@worldwide-invest.org"
-            >partners@worldwide-invest.org</a
-          >
-          <p class="contact-note">Include your firm name, role, and intent in the first message.</p>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="footer-grid">
+      <div class="footer-top">
         <div class="footer-brand">
-          <img class="mark" src="assets/mark.svg" width="40" height="40" alt="" />
+          <img src="assets/mark.svg" width="32" height="32" alt="" />
           <div>
             <strong>Worldwide Invest</strong>
-            <span class="mono">worldwide-invest.org</span>
+            <span>worldwide-invest.org</span>
           </div>
         </div>
-        <div class="footer-cols">
-          <div>
-            <h3>Explore</h3>
-            <a href="#strategies">Strategies</a>
-            <a href="#approach">Approach</a>
-            <a href="#perspectives">Perspectives</a>
-          </div>
-          <div>
-            <h3>Contact</h3>
-            <a href="mailto:partners@worldwide-invest.org">partners@worldwide-invest.org</a>
-          </div>
+        <div class="footer-nav">
+          <a href="#markets">Markets</a>
+          <a href="#capabilities">Capabilities</a>
+          <a href="#insights">Insights</a>
+          <a href="#firm">The firm</a>
+        </div>
+        <div class="footer-contact">
+          <span>General inquiries</span>
+          <a href="mailto:info@worldwide-invest.org">info@worldwide-invest.org</a>
         </div>
       </div>
-      <p class="disclaimer">
+      <p class="legal">
         This website provides general information only. It does not constitute investment advice,
         an offer, or a solicitation to buy or sell any security or digital asset. Past performance
         is not indicative of future results. Investing involves risk, including possible loss of
-        capital. Partnership discussions are subject to diligence and mutually agreed terms.
+        capital.
       </p>
       <p class="copy">&copy; <span id="year"></span> Worldwide Invest. All rights reserved.</p>
     </footer>
