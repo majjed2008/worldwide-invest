@@ -15,7 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=5" />
+    <link rel="stylesheet" href="styles.css?v=7" />
     <link rel="icon" href="assets/mark.svg?v=6" type="image/svg+xml" />
   </head>
   <body>
@@ -55,22 +55,33 @@
             width="1920"
             height="1080"
             data-parallax
+            data-parallax-strength="28"
           />
           <div class="hero-veil"></div>
+          <div class="hero-sweep"></div>
         </div>
         <div class="hero-inner">
-          <h1>Worldwide Invest</h1>
-          <p class="lead">Global capital. Disciplined markets.</p>
-          <p class="standfirst">
-            A multi-asset investment firm operating across equities, digital assets, and energy
-            markets — built for long-horizon capital, not short noise.
+          <h1 class="clip-line" data-hero-line style="--d: 0ms">
+            <span>Worldwide Invest</span>
+          </h1>
+          <p class="lead clip-line" data-hero-line style="--d: 160ms">
+            <span>Global capital. Disciplined markets.</span>
+          </p>
+          <p class="standfirst clip-line" data-hero-line style="--d: 300ms">
+            <span
+              >A multi-asset investment firm operating across equities, digital assets, and energy
+              markets — built for long-horizon capital, not short noise.</span
+            >
           </p>
         </div>
+        <a class="scroll-cue" href="#markets" aria-label="Continue to Markets">
+          <span></span>
+        </a>
       </section>
 
       <section id="markets" class="band markets">
-        <div class="band-head reveal">
-          <h2>Markets</h2>
+        <div class="band-head reveal" data-reveal>
+          <h2 class="clip-line"><span>Markets</span></h2>
           <p>
             We allocate attention and capital across public markets, digital assets, and physical
             energy systems — treating geography, liquidity, and settlement as part of the thesis,
@@ -78,19 +89,23 @@
           </p>
         </div>
 
-        <div class="plate reveal">
-          <img
-            src="assets/plate-markets.png"
-            alt=""
-            width="1600"
-            height="900"
-            loading="lazy"
-          />
+        <div class="plate wipe reveal" data-reveal data-wipe>
+          <div class="wipe-frame">
+            <img
+              src="assets/plate-markets.png"
+              alt=""
+              width="1600"
+              height="900"
+              loading="lazy"
+              data-parallax
+              data-parallax-strength="14"
+            />
+          </div>
           <p class="plate-caption">Research and execution desks. Quiet rooms, long books.</p>
         </div>
 
         <div class="market-grid">
-          <article class="reveal">
+          <article class="reveal" data-reveal style="--d: 0ms">
             <h3>Public equities</h3>
             <p>
               Regional and thematic equity exposure grounded in research quality, governance, and
@@ -98,7 +113,7 @@
               not when the headline moves.
             </p>
           </article>
-          <article class="reveal">
+          <article class="reveal" data-reveal style="--d: 80ms">
             <h3>Digital assets</h3>
             <p>
               Selective exposure only where custody, controls, and sizing meet the same standard as
@@ -106,7 +121,7 @@
               an institutional portfolio when they behave like one.
             </p>
           </article>
-          <article class="reveal">
+          <article class="reveal" data-reveal style="--d: 160ms">
             <h3>Energy and commodities</h3>
             <p>
               Oil, power, and related commodities read as physical systems: inventory, logistics,
@@ -114,7 +129,7 @@
               the daily narrative alone.
             </p>
           </article>
-          <article class="reveal">
+          <article class="reveal" data-reveal style="--d: 240ms">
             <h3>Cross-asset construction</h3>
             <p>
               Portfolios are one book. Equities, digital exposure, and energy are connected through
@@ -125,23 +140,37 @@
         </div>
       </section>
 
-      <section class="vista" aria-hidden="true">
-        <img
-          src="assets/plate-energy.png"
-          alt=""
-          width="1600"
-          height="900"
-          loading="lazy"
-          data-parallax
-        />
+      <section class="story" data-story>
+        <div class="story-sticky">
+          <p class="story-line" data-story-line>Equities.</p>
+          <p class="story-line" data-story-line>Digital assets.</p>
+          <p class="story-line" data-story-line>Energy.</p>
+          <p class="story-line story-line-end" data-story-line>One institutional standard.</p>
+        </div>
+      </section>
+
+      <section class="vista" data-reveal data-wipe>
+        <div class="wipe-frame vista-frame">
+          <img
+            src="assets/plate-energy.png"
+            alt=""
+            width="1600"
+            height="900"
+            loading="lazy"
+            data-parallax
+            data-parallax-strength="22"
+          />
+        </div>
         <div class="vista-veil"></div>
-        <p class="vista-line">Energy is infrastructure, inventory, and time.</p>
+        <p class="vista-line reveal" data-reveal>
+          Energy is infrastructure, inventory, and time.
+        </p>
       </section>
 
       <section id="capabilities" class="band capabilities">
         <div class="split">
-          <div class="split-copy reveal">
-            <h2>Capabilities</h2>
+          <div class="split-copy reveal" data-reveal>
+            <h2 class="clip-line"><span>Capabilities</span></h2>
             <p>
               Worldwide Invest is built for decisions that survive a full cycle: clear theses,
               controlled downside, and an operating standard that does not loosen when markets
@@ -153,7 +182,7 @@
             </p>
           </div>
           <div class="capability-list">
-            <article class="reveal">
+            <article class="reveal" data-reveal style="--d: 0ms">
               <h3>Research</h3>
               <p>
                 Fundamental work and market structure before size. We map legal regimes, settlement
@@ -161,21 +190,21 @@
                 risk.
               </p>
             </article>
-            <article class="reveal">
+            <article class="reveal" data-reveal style="--d: 80ms">
               <h3>Risk</h3>
               <p>
                 Limits, liquidity, and downside are designed first. Concentration, funding, and
                 exit paths are part of the thesis, not a later compliance layer.
               </p>
             </article>
-            <article class="reveal">
+            <article class="reveal" data-reveal style="--d: 160ms">
               <h3>Execution</h3>
               <p>
                 Disciplined entry and exit across venues and time zones. Speed without process is
                 noise; process without the ability to act is theatre.
               </p>
             </article>
-            <article class="reveal">
+            <article class="reveal" data-reveal style="--d: 240ms">
               <h3>Stewardship</h3>
               <p>
                 Quiet, precise communication. Capital is treated as a long relationship with risk —
@@ -187,17 +216,21 @@
       </section>
 
       <section class="duo band">
-        <div class="duo-media reveal">
-          <img
-            src="assets/plate-digital.png"
-            alt=""
-            width="1200"
-            height="675"
-            loading="lazy"
-          />
+        <div class="duo-media wipe reveal" data-reveal data-wipe>
+          <div class="wipe-frame">
+            <img
+              src="assets/plate-digital.png"
+              alt=""
+              width="1200"
+              height="675"
+              loading="lazy"
+              data-parallax
+              data-parallax-strength="12"
+            />
+          </div>
         </div>
-        <div class="duo-copy reveal">
-          <h2>New markets, old standards</h2>
+        <div class="duo-copy reveal" data-reveal>
+          <h2 class="clip-line"><span>New markets, old standards</span></h2>
           <p>
             Digital assets expand what can be held. They do not change what stewardship requires:
             custody that can be audited, sizing that respects liquidity, and controls that match
@@ -211,12 +244,12 @@
       </section>
 
       <section id="insights" class="band insights">
-        <div class="band-head reveal">
-          <h2>Insights</h2>
+        <div class="band-head reveal" data-reveal>
+          <h2 class="clip-line"><span>Insights</span></h2>
           <p>How we read the world of capital — without promising returns we cannot show.</p>
         </div>
         <div class="insight-stack">
-          <article class="insight featured reveal">
+          <article class="insight featured reveal" data-reveal>
             <h3>Geography still prices risk</h3>
             <p>
               Legal regimes, settlement rails, and physical logistics move returns as much as any
@@ -225,7 +258,7 @@
               conviction. Conviction without a map is just optimism with a ticker.
             </p>
           </article>
-          <article class="insight reveal">
+          <article class="insight reveal" data-reveal style="--d: 80ms">
             <h3>Cycles outlast narratives</h3>
             <p>
               Markets invent language every quarter. Energy systems, corporate cash flows, and
@@ -233,7 +266,7 @@
               the book when the structure changes, not when the story does.
             </p>
           </article>
-          <article class="insight reveal">
+          <article class="insight reveal" data-reveal style="--d: 160ms">
             <h3>Silence is a standard</h3>
             <p>
               We do not publish fabricated AUM, awards, or client lists to look larger than we are.
@@ -245,8 +278,8 @@
       </section>
 
       <section id="firm" class="band firm">
-        <div class="firm-panel reveal">
-          <h2>The firm</h2>
+        <div class="firm-panel reveal" data-reveal>
+          <h2 class="clip-line"><span>The firm</span></h2>
           <p class="firm-lead">
             Worldwide Invest exists to deploy and steward capital across global markets with
             discretion and rigor.
@@ -302,6 +335,6 @@
       <p class="copy">&copy; <span id="year"></span> Worldwide Invest. All rights reserved.</p>
     </footer>
 
-    <script src="script.js?v=5"></script>
+    <script src="script.js?v=7"></script>
   </body>
 </html>
