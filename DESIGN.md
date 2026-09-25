@@ -28,11 +28,12 @@ Dark institutional editorial presence site. Premium investment-house craft. Pers
 
 ## Layout
 
-- Brand-dominant hero, no CTA cluster
-- Markets as indexed rows
-- Capabilities as split editorial grid
-- Insights as dense panel grid
-- Firm statement band
+- Brand-dominant hero over full-bleed photography, no CTA cluster
+- Markets as denser editorial grid + plate
+- Vista band + capabilities split
+- Digital assets duo (photo + copy)
+- Insights as stacked editorial panels
+- Firm statement + standards list
 - Footer-only contact (`info@`)
 
 ## Do not

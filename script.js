@@ -25,10 +25,7 @@
     });
   }
 
-  const targets = document.querySelectorAll(
-    ".band-head, .market-rows li, .capability-list article, .insight, .firm-panel, .split-copy",
-  );
-  targets.forEach((el) => el.classList.add("reveal"));
+  const targets = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
       (entries) => {
@@ -39,10 +36,35 @@
           }
         });
       },
-      { threshold: 0.14 },
+      { threshold: 0.12, rootMargin: "0px 0px -6% 0px" },
     );
     targets.forEach((el) => io.observe(el));
   } else {
     targets.forEach((el) => el.classList.add("in"));
+  }
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const layers = document.querySelectorAll("[data-parallax]");
+  if (!reduceMotion && layers.length) {
+    let ticking = false;
+    const update = () => {
+      const vh = window.innerHeight || 1;
+      layers.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        const mid = rect.top + rect.height / 2;
+        const offset = ((mid - vh / 2) / vh) * -18;
+        el.style.transform = `translate3d(0, ${offset.toFixed(2)}px, 0) scale(1.06)`;
+      });
+      ticking = false;
+    };
+    const requestTick = () => {
+      if (!ticking) {
+        ticking = true;
+        window.requestAnimationFrame(update);
+      }
+    };
+    update();
+    window.addEventListener("scroll", requestTick, { passive: true });
+    window.addEventListener("resize", requestTick, { passive: true });
   }
 })();
