@@ -206,6 +206,7 @@ a {
   overflow: hidden;
 }
 
+.hero-film,
 .hero-photo {
   position: absolute;
   inset: -6% 0 -6%;
@@ -215,6 +216,19 @@ a {
   object-position: center 40%;
   transform: scale(1.05);
   will-change: transform;
+}
+
+.hero-film {
+  display: none;
+  filter: saturate(0.78) contrast(1.06) brightness(0.88);
+}
+
+.hero[data-hero-film="on"] .hero-film {
+  display: block;
+}
+
+.hero[data-hero-film="on"] .hero-photo {
+  opacity: 0;
 }
 
 .hero-veil {
@@ -241,10 +255,39 @@ a {
   transform: translateX(-40%);
 }
 
+.hero-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.hero-stage {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 72rem);
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(12rem, 0.7fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: end;
+}
+
 .hero-inner {
   position: relative;
   z-index: 1;
   max-width: 42rem;
+}
+
+.globe {
+  justify-self: end;
+  width: min(100%, 22rem);
+  height: auto;
+  aspect-ratio: 1;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 28px color-mix(in srgb, var(--brass) 18%, transparent));
+  cursor: crosshair;
 }
 
 .hero h1 {
@@ -334,9 +377,44 @@ a {
 
 .story {
   position: relative;
-  height: 220vh;
+  height: 240vh;
   border-top: 1px solid var(--line);
   background: var(--bg);
+  overflow: clip;
+}
+
+.story-media {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.story-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.08);
+  filter: saturate(0.75) contrast(1.05) brightness(0.55);
+  transition:
+    opacity 700ms var(--ease),
+    transform 1.4s var(--ease);
+}
+
+.story-media img.is-on {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.story-veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, color-mix(in srgb, var(--bg) 88%, transparent) 0%, color-mix(in srgb, var(--bg) 45%, transparent) 48%, color-mix(in srgb, var(--bg) 30%, transparent) 100%),
+    linear-gradient(0deg, color-mix(in srgb, var(--bg) 70%, transparent) 0%, transparent 40%);
+  pointer-events: none;
 }
 
 .story-sticky {
@@ -348,6 +426,7 @@ a {
   align-content: center;
   gap: 0.35rem;
   padding: 0 clamp(1.25rem, 4vw, 4rem);
+  z-index: 1;
 }
 
 .story-line {
@@ -357,7 +436,8 @@ a {
   font-weight: 400;
   line-height: 1.05;
   letter-spacing: -0.03em;
-  color: color-mix(in srgb, var(--ink) 28%, transparent);
+  color: color-mix(in srgb, var(--ink) 34%, transparent);
+  text-shadow: 0 2px 28px color-mix(in srgb, var(--bg) 70%, transparent);
   transition: color 500ms var(--ease), transform 500ms var(--ease), opacity 500ms var(--ease);
 }
 
@@ -793,8 +873,17 @@ a {
 @media (prefers-reduced-motion: reduce) {
   .hero-sweep,
   .scroll-cue,
-  .story {
-    display: none;
+  .hero-grain,
+  .globe {
+    display: none !important;
+  }
+
+  .hero[data-hero-film="on"] .hero-film {
+    display: none !important;
+  }
+
+  .hero[data-hero-film="on"] .hero-photo {
+    opacity: 1 !important;
   }
 
   .clip-line > span,
@@ -802,6 +891,10 @@ a {
   .wipe .wipe-frame img {
     transform: none !important;
     clip-path: none !important;
+  }
+
+  .story-media img {
+    transition: none !important;
   }
 }
 
@@ -824,8 +917,19 @@ a {
     order: -1;
   }
 
+  .hero-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .globe {
+    justify-self: start;
+    width: min(70%, 16rem);
+    order: -1;
+    margin-bottom: 0.5rem;
+  }
+
   .story {
-    height: 180vh;
+    height: 200vh;
   }
 
   .story-line {
