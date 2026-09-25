@@ -283,12 +283,19 @@ a {
 .globe {
   justify-self: end;
   align-self: center;
+  position: relative;
   width: min(100%, 24rem);
-  height: auto;
   aspect-ratio: 1;
-  opacity: 1;
-  filter: drop-shadow(0 0 36px color-mix(in srgb, var(--brass) 28%, transparent));
-  cursor: crosshair;
+  border-radius: 50%;
+  overflow: hidden;
+  filter: drop-shadow(0 0 40px color-mix(in srgb, var(--brass) 22%, transparent));
+  cursor: grab;
+}
+
+.globe canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .hero h1 {
