@@ -1,0 +1,6 @@
+.impeccable/
+.git/
+*.md
+!README.md
+.env
+.env.*
