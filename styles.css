@@ -125,8 +125,8 @@ a {
 .logo img,
 .logo-mark {
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   object-fit: cover;
   border: 1px solid color-mix(in srgb, var(--brass) 22%, var(--line));
@@ -134,13 +134,13 @@ a {
 }
 
 .footer-brand .logo-mark {
-  width: 2.25rem;
-  height: 2.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .logo-mark {
-    animation: earth-spin 28s linear infinite;
+    animation: earth-spin 16s linear infinite;
   }
 }
 
