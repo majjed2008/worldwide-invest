@@ -165,9 +165,9 @@
       rotation += 0.004 + hoverBoost * 0.006;
 
       ctx.clearRect(0, 0, w, h);
-      ctx.lineWidth = Math.max(1, w * 0.0022);
-      const brass = `rgba(208, 176, 122, ${0.45 + hoverBoost * 0.4})`;
-      const brassSoft = `rgba(184, 149, 95, ${0.18 + hoverBoost * 0.2})`;
+      ctx.lineWidth = Math.max(1.5, w * 0.0035);
+      const brass = `rgba(232, 205, 150, ${0.72 + hoverBoost * 0.28})`;
+      const brassSoft = `rgba(208, 176, 122, ${0.35 + hoverBoost * 0.3})`;
 
       ctx.beginPath();
       ctx.arc(cx, cy, r, 0, Math.PI * 2);
