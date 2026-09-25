@@ -28,7 +28,7 @@ Dark institutional editorial presence site. Premium investment-house craft. Pers
 
 ## Mark
 
-Thin geometric globe with meridians (brass stroke on near-black). No lettermark arches.
+Photoreal Earth sphere mark (small, circular) in header, footer, and favicon.
 
 ## Imagery
 
