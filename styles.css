@@ -180,8 +180,8 @@ a {
   min-height: 100vh;
   min-height: 100dvh;
   display: grid;
-  align-items: end;
-  padding: calc(var(--header) + 3rem) clamp(1.25rem, 4vw, 4rem) clamp(4rem, 10vh, 7rem);
+  align-items: center;
+  padding: calc(var(--header) + 2.5rem) clamp(1.25rem, 4vw, 4rem) clamp(3rem, 8vh, 5rem);
   overflow: hidden;
 }
 
@@ -265,23 +265,24 @@ a {
   position: relative;
   z-index: 1;
   max-width: 46rem;
+  padding-top: 2rem;
 }
 
 .wordmark {
-  margin: 0 0 1.25rem;
+  margin: 0 0 1rem;
   font-family: var(--display);
-  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
   font-style: italic;
   color: var(--brass-2);
   letter-spacing: 0.01em;
 }
 
 .hero h1 {
-  margin: 0 0 1.4rem;
+  margin: 0 0 1.25rem;
   font-family: var(--display);
-  font-size: clamp(3.1rem, 8.2vw, 6.4rem);
+  font-size: clamp(2.8rem, 7.2vw, 5.6rem);
   font-weight: 400;
-  line-height: 0.96;
+  line-height: 1.02;
   letter-spacing: -0.025em;
 }
 
@@ -496,14 +497,37 @@ a {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 650ms var(--ease), transform 650ms var(--ease);
-}
-
-.reveal.in {
   opacity: 1;
   transform: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 650ms var(--ease), transform 650ms var(--ease);
+  }
+
+  .reveal.in {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* If JS never runs, still show content after a beat */
+  @keyframes ensure-visible {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .reveal {
+    animation: ensure-visible 0.01s 1.2s forwards;
+  }
+
+  .reveal.in {
+    animation: none;
+  }
 }
 
 @media (max-width: 980px) {
