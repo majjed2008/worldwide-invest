@@ -4,22 +4,21 @@
 
 ## Overview
 
-Dark cartographic projection-room identity for a partnership-facing investment marketing site. Capital as geography: map routes, brass accent, institutional calm. Persuade mode; one conversion (partnership contact).
+Dark cartographic projection-room identity for a partnership-facing investment marketing site. Capital as geography. Persuade mode. Institutional density closer to Apollo/BlackRock craft than a sparse startup landing.
 
 ## Color
 
 | Token | Value | Role |
 | --- | --- | --- |
-| `--bg` | `#0b1018` | Page ground |
-| `--bg-elev` | `#121a24` | Contact band |
-| `--ink` | `#e8e6e0` | Primary text |
-| `--ink-soft` | `#b4bac4` | Supporting copy |
-| `--muted` | `#8a9aab` | Meta / disclaimer |
+| `--bg` | `#070b12` | Page ground |
+| `--bg-elev` | `#0e1520` | Elevated bands |
+| `--bg-panel` | `#121a26` | Contact panel |
+| `--ink` | `#eceae4` | Primary text |
+| `--ink-soft` | `#b7bfc9` | Supporting copy |
+| `--muted` | `#8796a8` | Meta / disclaimer |
 | `--brass` | `#c4a574` | Accent, CTA, tags |
 | `--map` | `#6a8fa3` | Cartography lines |
-| `--line` | `#2a3848` | Rules / borders |
-
-Strategy: restrained — neutrals plus brass; map cyan/slate reserved for SVG atmosphere.
+| `--line` | `#243344` | Rules / borders |
 
 ## Typography
 
@@ -27,29 +26,29 @@ Strategy: restrained — neutrals plus brass; map cyan/slate reserved for SVG at
 | --- | --- | --- |
 | Display / UI | Bricolage Grotesque | Brand, headings, buttons, nav |
 | Body | Source Serif 4 | Lede and paragraphs |
-| Mono | Source Code Pro | Coordinates, domain, market tags |
+| Mono | Source Code Pro | Coordinates, tags, domain |
 
 ## Layout
 
-- Fixed frosted header; full-bleed hero map; sections separated by hairline rules.
-- Markets as indexed end-tag rows (EQ / DA / EN / XA), not icon cards.
-- Partnerships as three ruled columns (stack on small screens).
-- Max readable measure ~36–42rem on body blocks.
+- Fixed frosted header with monogram lockup
+- Full-bleed cartographic hero; brand-dominant first viewport
+- Strategies as 2×2 board with hairline rules (not icon cards)
+- Partnership process as numbered sequence (sequence carries meaning)
+- Perspectives as three ruled columns
+- Contact panel + dense footer
 
 ## Motion
 
-- Slow map drift; dashed-route pulse; node glow.
-- Disabled under `prefers-reduced-motion`.
+- Map drift + route pulse + node glow
+- Section reveal on scroll (blur/translate), reduced-motion safe
 
 ## Components
 
-- Primary button: solid brass fill, dark ink.
-- Ghost button: hairline border, transparent fill.
-- Nav CTA: brass outline chip.
-- Market tag: mono brass label.
+- WI monogram mark (`assets/mark.svg`)
+- Primary brass CTA; ghost secondary
+- Market tags EQ / DA / EN / XA
 
 ## Do not
 
-- Invent AUM, licenses, clients, awards, or performance.
-- Hero stats strips, icon-card grids, purple/glow fintech cues.
-- Eyebrow kickers above headings.
+- Invent AUM, licenses, clients, awards, or performance
+- Hero metric strips, purple/glow fintech, eyebrow kickers

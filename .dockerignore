@@ -1,5 +1,7 @@
 .impeccable/
 .git/
+scripts/
+.cursor/
 *.md
 !README.md
 .env
