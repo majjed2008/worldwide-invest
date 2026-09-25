@@ -16,7 +16,8 @@ Push `main` to GitHub; Coolify rebuilds from the Dockerfile.
 
 ## Contact
 
-Partnership CTA: `partners@worldwide-invest.org` — create this mailbox on the domain before outreach.
+Footer only: `info@worldwide-invest.org` (create the mailbox on the domain). No partnership funnel on the site.
+
 
 ## Local preview
 
