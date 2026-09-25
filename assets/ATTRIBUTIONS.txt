@@ -1,3 +1,5 @@
-﻿hero-film.mp4 — Mixkit Stock Video Free License
-Source: City buildings lit up at night (mixkit.co/free-stock-video/city-buildings-lit-up-at-night-2028/)
-https://mixkit.co/license/#videoFree
+﻿earth-day.jpg, earth-lights.png, earth-normal.jpg — planet textures from the three.js examples set
+(https://github.com/mrdoob/three.js) used for the real Earth globe.
+
+three.min.js — three.js r160 (MIT)
+https://github.com/mrdoob/three.js

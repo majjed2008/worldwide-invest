@@ -206,7 +206,6 @@ a {
   overflow: hidden;
 }
 
-.hero-film,
 .hero-photo {
   position: absolute;
   inset: -6% 0 -6%;
@@ -216,19 +215,7 @@ a {
   object-position: center 40%;
   transform: scale(1.05);
   will-change: transform;
-}
-
-.hero-film {
-  display: none;
-  filter: saturate(0.78) contrast(1.06) brightness(0.88);
-}
-
-.hero[data-hero-film="on"] .hero-film {
-  display: block;
-}
-
-.hero[data-hero-film="on"] .hero-photo {
-  opacity: 0;
+  filter: saturate(0.88) contrast(1.04) brightness(0.92);
 }
 
 .hero-veil {
@@ -884,14 +871,6 @@ a {
   .hero-grain,
   .globe {
     display: none !important;
-  }
-
-  .hero[data-hero-film="on"] .hero-film {
-    display: none !important;
-  }
-
-  .hero[data-hero-film="on"] .hero-photo {
-    opacity: 1 !important;
   }
 
   .clip-line > span,

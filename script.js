@@ -36,19 +36,7 @@
 
   const film = document.querySelector(".hero-film");
   if (film) {
-    if (reduceMotion || hero?.getAttribute("data-hero-film") !== "on") {
-      film.pause?.();
-      film.removeAttribute("autoplay");
-    } else {
-      const play = () => {
-        film.play().catch(() => {});
-      };
-      play();
-      document.addEventListener("visibilitychange", () => {
-        if (document.hidden) film.pause();
-        else play();
-      });
-    }
+    film.pause?.();
   }
 
   const reveals = document.querySelectorAll("[data-reveal], .reveal");
